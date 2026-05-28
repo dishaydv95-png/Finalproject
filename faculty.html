@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICMS College - Faculity</title>
+	
+	<!-- css for dark mode -->
+	<link rel="stylesheet" href="css/darkmode.css">
+	
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	
+	<!-- style sheet for fade-in on scroll -->
+	<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<style>
+        .hero {
+            background: url('images/student_pl/placement1.jpeg') no-repeat center center/cover;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+		.overlay {
+         background: rgba(0,0,0,0.7);
+         width: 100%;
+         padding: 40px;
+         }
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+		
+		/* Nav menu */
+		.navbar {
+    padding: 12px 0;
+}
+
+.navbar-brand {
+    font-size: 22px;
+}
+
+.nav-link {
+    font-size: 15px;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important;
+}
+
+.dropdown-menu {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.dropdown-item:hover 
+{
+    background: #0d6efd;
+    color: white;
+}
+		/* footer */
+
+		footer a 
+		{
+			text-decoration: none;
+		}
+
+		footer a:hover 
+		{
+		text-decoration: underline;
+		}
+		
+		.card {
+        transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+         transform: translateY(-10px);
+         box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+         }
+		 .company-logo img{
+		   height: 60px;
+		   object-fit: contain;
+		   }
+		 
+    </style>
+	
+	<!-- style sheet for fade-in on scroll -->
+	<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+	
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+
+    <a class="navbar-brand fw-bold" href="Home.php">ICMS College</a>
+
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+
+        <!-- Home -->
+        <li class="nav-item">
+          <a class="nav-link" href="Home.php">Home</a>
+        </li>
+
+        <!-- About -->
+        <li class="nav-item">
+          <a class="nav-link" href="Aboutus.html">About</a>
+        </li>
+
+        <!-- Academics Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Academics</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="Cources.html">Courses</a></li>
+            <li><a class="dropdown-item" href="Admission.html">Admissions</a></li>
+            <li><a class="dropdown-item" href="Fees.html">Fees</a></li>
+          </ul>
+        </li>
+
+        <!-- Campus Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Campus</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="facilities.html">Facilities</a></li>
+            <li><a class="dropdown-item" href="Gallery.html">Gallery</a></li>
+          </ul>
+        </li>
+
+        <!-- Students Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Students</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="placement.html">Placements</a></li>
+            <li><a class="dropdown-item" href="Recruiters.html">Recruiters</a></li>
+            <li><a class="dropdown-item" href="student_portfolio.html">Portfolio</a></li>
+          </ul>
+        </li>
+
+        <!-- More Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">More</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="Contact.html">Contact</a></li>
+            <li><a class="dropdown-item" href="feedback.html">Feedback</a></li>
+            <li><a class="dropdown-item" href="FAQ.html">FAQ</a></li>
+            <li><a class="dropdown-item" href="faculty.html">Faculty</a></li>
+          </ul>
+        </li>
+
+        <!-- Login -->
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Login</a>
+        </li>
+
+        <!-- Dark Mode -->
+        <li class="nav-item ms-lg-3">
+          <button onclick="toggleDarkMode()" class="btn btn-outline-light btn-sm">
+            🌙 Dark Mode
+          </button>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+     
+  
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="overlay text-center" data-aos="fade-down">
+        <h1>Our Faculity</h1>
+        <p>Meet a experience and dedicated Teachers</p>
+    </div>
+</section>
+
+		
+
+<!-- Facilities Section -->
+<div class="container my-5" data-aos="zoom-in" data-aos-delay="100">
+<h2 class="text-center mb-4">Faculty Member</h2>
+    <div class="row g-4">
+
+        <!-- Faculty 1 -->
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card facility-card shadow text-center">
+                <img src="images\teacher\1.jpeg">
+                <div class="card-body">
+                    <h5>Dr.Amit Sharma</h5>
+                    <p class="text-muted">Head of computer department</p>
+					<p>MCA, PhD in Computer Science</p>
+					<p>10+ years teaching experience</p>
+					<a href="faculty_details.html?id=1" class="btn btn-primary">More Detials</a>
+                </div>
+            </div>
+        </div>
+		
+		<!-- Faculty 2 -->
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card facility-card shadow text-center">
+                <img src="images\teacher\2.jpeg">
+                <div class="card-body">
+                    <h5>Ms.Neha Verma</h5>
+                    <p class="text-muted">Commerece Faculty</p>
+					<p>M.com, NET Qualified</p>
+					<p>8+ years teaching experience</p>
+					<a href="faculty_details.html?id=2" class="btn btn-primary">More Detials</a>
+                </div>
+            </div>
+        </div>
+		
+		<!-- Faculty 3 -->
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card facility-card shadow text-center">
+                <img src="images\teacher\3.jpeg">
+                <div class="card-body">
+                    <h5>Mr.Rahul Singh</h5>
+                    <p class="text-muted">Business Studies Faculty</p>
+					<p>MBA, Marketing Specialist</p>
+					<p>7+ years teaching experience</p>
+					<a href="faculty_details.html?id=3" class="btn btn-primary">More Detials</a>
+                </div>
+            </div>
+        </div>
+		
+		<!-- Faculty 4 -->
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card facility-card shadow text-center">
+                <img src="images\teacher\4.jpeg">
+                <div class="card-body">
+                    <h5>Ms.Pooja Gupta</h5>
+                    <p class="text-muted">Tally & Accounts Trainer Faculty</p>
+					<p>B.com, Tally Expert</p>
+					<p>6+ years teaching experience</p>
+					<a href="faculty_details.html?id=4" class="btn btn-primary">More Detials</a>
+                </div>
+            </div>
+        </div>
+		
+		<!-- Faculty 5 -->
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card facility-card shadow text-center">
+                <img src="images\teacher\5.jpeg">
+                <div class="card-body">
+                    <h5>Mr.Ankit Jain</h5>
+                    <p class="text-muted">Programming Instructor</p>
+					<p>B.Tech,Software Developer</p>
+					<p>5+ years teaching experience</p>
+					<a href="faculty_details.html?id=5" class="btn btn-primary">More Detials</a>
+                </div>
+            </div>
+        </div>
+		
+		<!-- Faculty 6 -->
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card facility-card shadow text-center">
+                <img src="images\teacher\6.jpeg">
+                <div class="card-body">
+                    <h5>Ms. Sneha Kapoor</h5>
+                    <p class="text-muted">Commerece Faculty</p>
+					<p>BFA,Design Specialist</p>
+					<p>6+ years teaching experience</p>
+					<a href="faculty_details.html?id=6" class="btn btn-primary">More Detials</a>
+                </div>
+            </div>
+        </div>
+		
+		<!-- Faculty 7 -->
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card facility-card shadow text-center">
+                <img src="images\teacher\7.jpeg">
+                <div class="card-body">
+                    <h5>Ms. Sulkha Rawat</h5>
+                    <p class="text-muted">Graphic Design Trainer</p>
+					<p>BFA,Design Specialist</p>
+					<p>6+ years teaching experience</p>
+					<a href="faculty_details.html?id=7" class="btn btn-primary">More Detials</a>
+                </div>
+            </div>
+        </div>
+		
+		<!-- Faculty 8 -->
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card facility-card shadow text-center">
+                <img src="images\teacher\8.jpeg">
+                <div class="card-body">
+                    <h5>Ms. Rekah Bansal</h5>
+                    <p class="text-muted">Graphic Design Trainer</p>
+					<p>BFA,Design Specialist</p>
+					<p>6+ years teaching experience</p>
+					<a href="faculty_details.html?id=8" class="btn btn-primary">More Detials</a>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+	
+<!-- CTA -->
+<div class="bg-primary text-white text-center p-5">
+    <h2>Learn from the best Faculty</h2>
+    <p>Join ICMS Collage today</p>
+    <a href="Enqueryform.html" class="btn btn-light">Apply Now</a>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center pt-4 pb-2">
+   <div class="container">
+      <div class="row text-center text-md-start">
+	  
+	    <!-- Collage Info-->
+		<div class="col-md-4 mb-3">
+		   <h5>ICMS Collage</h5>
+           <p>Providing quality education and shaping future leaders.</p>
+		</div>
+		
+		<!--Contact Info-->
+		<div class="col-md-4 mb-3">
+		    <h5>Contact Us</h5>
+			<p>📞 Phone: <a href="tel:+918126863163" class="text-white">+91-8126863163</a></p> 
+			<p>📧 Email:<a href="mailto:info@icmscollage.com" class="text-white">info@icmscollage.com</a></p>
+			<p>📍 Address: Agwar, India</p>
+		</div>
+		
+		<!--Quick Links-->
+		<div class="col-md-4 mb-3">
+		    <h5>Quick Links</h5>
+			<p><a href="home.html" class="text-white">Home</a></p>
+			<p><a href="Aboutus.html" class="text-white">About</a></p>
+			<p><a href="Contact.html" class="text-white">Contact</a></p>
+		</div>
+		
+		</div>
+		
+		<hr class="bg-light">
+		
+		<!--Bottom-->
+		<div class="text-center">
+		    <p class="mb-0">© 2026 ICMS College | All Rights Reserved</p>
+		</div>
+	</div>
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Javascript for dynamic counter -->
+<script>
+const counters = document.querySelectorAll('.counter');
+
+const startCounting = (counter) => {
+    const target = +counter.getAttribute('data-target');
+    let count = 0;
+    const speed = target / 100;
+	
+    const duration = 2000;
+    const stepTime = 20;
+    const steps = duration / stepTime;
+    const increment = target / steps;
+
+    const updateCount = () => {
+        if (count < target) {
+            count += speed;
+            counter.innerText = Math.floor(count);
+            setTimeout(updateCount, 20);
+        } else {
+            counter.innerText = target + "+";
+			
+			// Custom formatting
+            if(target == 95){
+                counter.innerText = target + "%";
+            }
+            if(target == 5){
+                counter.innerText = "₹" + target + " LPA";
+            }
+        }
+    };
+
+    updateCount();
+};
+
+// Trigger on scroll
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            startCounting(entry.target);
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+counters.forEach(counter => {
+    observer.observe(counter);
+});
+</script>
+
+<!-- Javascript for fade-in on scroll -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+
+<!-- Dark mode js -->
+<script src="js/darkmode.js"></script>
+</body>
+</html>

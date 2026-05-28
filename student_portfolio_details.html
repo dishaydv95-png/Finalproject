@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Details - ICMS College</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .profile-img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .section-title {
+            border-left: 5px solid #0d6efd;
+            padding-left: 10px;
+            margin-bottom: 15px;
+        }
+
+        .info-box p {
+            margin-bottom: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="Student_Portfolio.html">← Back to Students</a>
+    </div>
+</nav>
+
+<div class="container my-5">
+
+    <div class="row">
+
+        <!-- LEFT: Student Image -->
+        <div class="col-md-4">
+            <img id="studentImage" class="profile-img shadow">
+        </div>
+
+        <!-- RIGHT: Student Details -->
+        <div class="col-md-8">
+
+            <h2 id="studentName"></h2>
+            <p id="studentCourse" class="text-muted"></p>
+
+            <hr>
+
+            <div class="info-box">
+                <p><strong>Semester:</strong> <span id="studentSemester"></span></p>
+                <p><strong>Batch:</strong> <span id="studentBatch"></span></p>
+                <p><strong>Trade:</strong> <span id="studentTrade"></span></p>
+                <p><strong>Percentage:</strong> <span id="studentMarks"></span></p>
+            </div>
+
+            <!-- About -->
+            <div class="mt-4">
+                <h5 class="section-title">About Student</h5>
+                <p id="studentBio"></p>
+            </div>
+
+            <!-- Achievements -->
+            <div class="mt-4">
+                <h5 class="section-title">Achievements</h5>
+                <ul id="studentAchievements"></ul>
+            </div>
+
+            <!-- Project -->
+            <div class="mt-4">
+                <h5 class="section-title">Project Details</h5>
+                <p id="studentProject"></p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- Script -->
+<script>
+const data = {
+    1: {
+        name: "Rohit Sharma",
+        course: "BCA Student",
+        semester: "6th Semester",
+        batch: "2023 - 2026",
+        trade: "Computer Applications",
+        marks: "92%",
+        image: "images/students/1.jpeg",
+        bio: "A highly motivated student with strong interest in programming and web development.",
+        achievements: [
+            "🏆 University Rank 1",
+            "💻 Coding Competition Winner",
+            "📊 Excel Dashboard Project Winner"
+        ],
+        project: "Developed a complete College Management System using PHP & MySQL with admin panel."
+    },
+
+    2: {
+        name: "Neha Verma",
+        course: "B.Com Student",
+        semester: "6th Semester",
+        batch: "2023 - 2026",
+        trade: "Commerce",
+        marks: "89%",
+        image: "images/students/2.jpeg",
+        bio: "Focused on finance and accounting with excellent academic performance.",
+        achievements: [
+            "📊 Finance Topper",
+            "🏆 Best Student Award",
+            "📚 Academic Excellence"
+        ],
+        project: "Created financial analysis reports and business case studies."
+    },
+	
+	3: {
+        name: "Abhay Kumar",
+        course: "MSc(IT)",
+        semester: "4th Semester",
+        batch: "2025 - 2027",
+        trade: "IT",
+        marks: "89%",
+        image: "Images/Students/3.jpeg",
+        bio: "Abhay Kumar is a dedicated and highly skilled IT student with a strong academic record of 89%. As a Coding and Development Expert, he possesses excellent problem-solving abilities and hands-on experience in programming, software development, and modern technologies. He is passionate about building efficient applications and continuously enhancing his technical skills to stay updated with industry trends.",
+        achievements: [
+            "📊 Coding Topper",
+            "🏆 Best Programer Award",
+            "📚 Academic Excellence"
+        ],
+        project: "Devloped a software for Traffice System in Java Programming Language using MySQL."
+    },
+	
+	 4: {
+        name: "Sahil Khan",
+        course: "MCA",
+        semester: "4th Semester",
+        batch: "2026 - 2028",
+        trade: "IT",
+        marks: "85%",
+        image: "Images/Students/4.jpeg",
+        bio: "Sahil Khan is a dedicated MCA 4th semester student who has achieved an impressive 85% academic record. He has developed strong expertise in algorithm designing, showcasing excellent problem-solving skills and logical thinking. Sahil is passionate about building efficient solutions and continuously enhances his technical knowledge to excel in the field of computer science.",
+        achievements: [
+            "📊 Algorithm Desining Expert",
+            "🏆 Best Programer Award",
+            "📚 Academic Excellence"
+        ],
+        project: "Devloped a Website of college using HTML, PHP, MySQL and bootstrap technology."
+    }
+	,
+	 5: {
+        name: "Rakhi Mehta",
+        course: "BBA",
+        semester: "6th Semester",
+        batch: "2024 - 2027",
+        trade: "Management",
+        marks: "87%",
+        image: "Images/Students/5.jpeg",
+        bio: "Rakhi Mehta is a final-year BBA student with an excellent 87% academic performance. She has earned recognition as a Business Strategy Winner, reflecting her strong analytical thinking and decision-making skills. Rakhi demonstrates a keen understanding of market dynamics and strategic planning, making her a promising future business professional.",
+        achievements: [
+            "📊 Business Strategy Winner",
+            "🏆 Best Strategic Planner Award",
+            "📚 Academic Excellence"
+        ],
+        project: "Created detail analysis company report for sales and grows of bussiness."
+    },
+	 6: {
+        name: "Isha Khanna",
+        course: "MBA",
+        semester: "4th Semester",
+        batch: "2026 - 2028",
+        trade: "Management",
+        marks: "88%",
+        image: "Images/Students/6.jpeg",
+        bio: "Isha Khanna is an MBA 4th semester student with an outstanding 88% academic record. She is a Business Excellence Awardee, recognized for her strong leadership, strategic thinking, and problem-solving abilities. Isha consistently demonstrates a results-driven approach and a deep understanding of business operations.",
+        achievements: [
+            "📊 Business Strategy Winner",
+            "🏆 Business Excellence Awardee",
+            "📚 strong leadership, strategic thinking"
+        ],
+        project: "Market Expansion Strategy for Emerging Businesses – A research-based project focused on identifying growth opportunities, competitive analysis, and strategic planning to help businesses expand into new markets effectively."
+    }
+};
+
+// Get ID from URL
+const id = new URLSearchParams(window.location.search).get("id");
+const s = data[id];
+
+// Set Data
+document.getElementById("studentName").innerText = s.name;
+document.getElementById("studentCourse").innerText = s.course;
+document.getElementById("studentSemester").innerText = s.semester;
+document.getElementById("studentBatch").innerText = s.batch;
+document.getElementById("studentTrade").innerText = s.trade;
+document.getElementById("studentMarks").innerText = s.marks;
+document.getElementById("studentImage").src = s.image;
+document.getElementById("studentBio").innerText = s.bio;
+document.getElementById("studentProject").innerText = s.project;
+
+// Achievements list
+const list = document.getElementById("studentAchievements");
+s.achievements.forEach(a => {
+    let li = document.createElement("li");
+    li.innerText = a;
+    list.appendChild(li);
+});
+</script>
+
+</body>
+</html>

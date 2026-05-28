@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faculty Details - ICMS College</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .profile-img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .section-title {
+            border-left: 5px solid #0d6efd;
+            padding-left: 10px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="faculty.html">← Back to Faculty</a>
+    </div>
+</nav>
+
+<div class="container my-5">
+
+    <div class="row">
+
+        <!-- Left Image -->
+        <div class="col-md-4">
+            <img id="facultyImage" class="profile-img">
+        </div>
+
+        <!-- Right Details -->
+        <div class="col-md-8">
+
+            <h2 id="facultyName"></h2>
+            <p id="facultyRole" class="text-muted"></p>
+
+            <hr>
+
+            <p><strong>Qualification:</strong> <span id="facultyQualification"></span></p>
+            <p><strong>Experience:</strong> <span id="facultyExperience"></span></p>
+            <p><strong>Department:</strong> <span id="facultyDept"></span></p>
+
+            <!-- Bio -->
+            <div class="mt-4">
+                <h5 class="section-title">About Faculty</h5>
+                <p id="facultyBio"></p>
+            </div>
+
+            <!-- Achievements -->
+            <div class="mt-4">
+                <h5 class="section-title">Achievements</h5>
+                <ul id="facultyAchievements"></ul>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<script>
+const data = {
+    1: {
+        name: "Dr. Amit Sharma",
+        role: "Head of Computer Department",
+        qualification: "MCA, PhD in Computer Science",
+        experience: "10+ years",
+        dept: "Computer Science",
+        image: "Images/Teacher/1.jpeg",
+        bio: "Dr. Amit Sharma is the Head of the Computer Department, known for his strong academic background and leadership in technology education. He has extensive experience in teaching subjects like programming, database management, and software development. Under his guidance, the department focuses on practical learning, innovation, and industry-oriented skills. He actively supports students in projects, research, and career development, helping them build a strong foundation in the field of computer science.",
+        achievements: [
+            "Published 10+ research papers",
+            "Best Teacher Award 2023",
+            "Guided 50+ student projects"
+        ]
+    },
+    2: {
+        name: "Ms. Neha Verma",
+        role: "Commerce Faculty",
+        qualification: "M.Com, NET Qualified",
+        experience: "8+ years",
+        dept: "Commerce",
+        image: "Images/Teacher/2.jpeg",
+        bio: "Ms. Neha Verma is a dedicated member of the Commerce Faculty, specializing in subjects such as accounting, business studies, and economics. She is known for her clear teaching style and ability to simplify complex financial concepts. With a student-focused approach, she encourages practical learning through real-world examples and case studies. Ms. Verma actively guides students in building strong conceptual knowledge and preparing for academic as well as professional success in the commerce field.",
+        achievements: [
+            "Top Faculty Award",
+            "Conducted 20+ seminars",
+            "Student mentor"
+        ]
+    },
+    3: {
+        name: "Mr. Rahul Singh",
+        role: "Business Studies Faculty",
+        qualification: "MBA, Marketing Specialist",
+        experience: "7+ years",
+        dept: "Management",
+        image: "Images/Teacher/3.jpeg",
+        bio: "Mr. Rahul Singh is an experienced Business Studies faculty member with an MBA in Marketing and over 7 years of teaching experience. He specializes in marketing strategies, business management, and entrepreneurship concepts. Known for his practical and engaging teaching style, he connects theoretical knowledge with real-world business scenarios. Mr. Singh focuses on developing students’ analytical thinking, communication skills, and industry readiness, helping them excel in both academics and future careers.",
+        achievements: [
+            "Startup Mentor",
+            "Industry Collaboration Projects",
+            "Corporate Training Expert"
+        ]
+    },
+	4: {
+        name: "Ms. Pooja Gupta",
+        role: "Tally & Accounts Trainer",
+        qualification: "B.Com, Tally Expert",
+        experience: "6+ years experience",
+        dept: "Account",
+        image: "Images/Teacher/4.jpeg",
+        bio: "**Ms. Pooja Gupta** is a skilled and dedicated Tally & Accounts Trainer with over 6 years of teaching experience in the field of commerce and accounting. She holds a Bachelor of Commerce (B.Com) degree and is recognized as a Tally expert, with strong practical knowledge of accounting software and financial processes. She specializes in teaching Tally, bookkeeping, GST basics, and financial accounting, helping students gain both theoretical understanding and hands-on skills. Known for her clear teaching style, she simplifies complex accounting concepts and ensures students are well-prepared for real-world financial tasks. She is committed to guiding learners toward successful careers in accounting and finance.",
+        achievements: [
+            "Startup Mentor",
+            "Industry Collaboration Projects",
+            "Corporate Training Expert"
+        ]
+    },
+	5: {
+        name: "Mr. Ankit Jain",
+        role: "Programming Instructor",
+        qualification: "B.Tech, Software Developer",
+        experience: "5+ years experience",
+        dept: "Develpment",
+        image: "Images/Teacher/5.jpeg",
+        bio: "**Mr. Ankit Jain** is a knowledgeable and dedicated Programming Instructor with over 5 years of teaching experience. He holds a B.Tech degree and has professional experience as a software developer, which adds practical industry insight to his teaching. He specializes in programming languages such as C, C++, Java, and Python, and focuses on building strong coding fundamentals among students. Known for his hands-on teaching approach, he helps learners understand real-world applications of programming concepts and guides them in developing problem-solving skills essential for a career in the IT industry.",
+        achievements: [
+            "Startup Mentor",
+            "Industry Collaboration Projects",
+            "Corporate Training Expert"
+        ]
+    },
+	6: {
+        name: "Ms. Sneha Kapoor",
+        role: "Graphics Design Trainer",
+        qualification: "BFA, Design Specialist",
+        experience: "6+ years experience",
+        dept: "Designing",
+        image: "Images/Teacher/6.jpeg",
+        bio: "Graphics Design Trainer Ms. Sneha Kapoor is a creative Graphics Design Trainer with a BFA and over 6 years of experience in the design field. She specializes in visual design, branding, and digital creativity. Known for her hands-on teaching approach, she helps students develop practical skills in tools like Photoshop and Illustrator while encouraging creativity and innovation. She focuses on building strong design fundamentals and preparing students for real-world projects and careers in graphic design.",
+        achievements: [
+            "Startup Mentor",
+            "Industry Collaboration Projects",
+            "Corporate Training Expert"
+        ]
+    },
+	7: {
+        name: "Ms. Sulkha Rawat",
+        role: "Computer Trainer",
+        qualification: "MCA, Computer Specilist",
+        experience: "7+ years experience",
+        dept: "Computer Training",
+        image: "Images/Teacher/7.jpeg",
+        bio: "Ms. Sulkha Rawat is a skilled Graphics Design Trainer with a BFA and over 6 years of experience in the design industry. She specializes in visual design, branding, and creative digital tools. With a practical and student-friendly teaching style, she helps learners build strong design fundamentals and develop their creativity, preparing them for real-world design projects and careers.",
+        achievements: [
+            "Startup Mentor",
+            "Industry Collaboration Projects",
+            "Corporate Training Expert"
+        ]
+    },
+	8: {
+        name: "Ms. Rekah Bansal",
+        role: "Graphics Design Trainer",
+        qualification: "BFA, Design Specialistt",
+        experience: "5+ years experience",
+        dept: "Graphics Design",
+        image: "Images/Teacher/8.jpeg",
+        bio: "Ms. Rekah Bansal is a creative Graphics Design Trainer with a BFA and over 6 years of experience in the design field. She specializes in visual design, branding, and digital tools. Known for her practical and engaging teaching style, she helps students build strong design fundamentals and creativity, preparing them for real-world projects and professional careers in graphic design.",
+        achievements: [
+            "Startup Mentor",
+            "Industry Collaboration Projects",
+            "Corporate Training Expert"
+        ]
+    }
+};
+
+// Get ID from URL
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get('id');
+
+const faculty = data[id];
+
+// Set data
+document.getElementById("facultyName").innerText = faculty.name;
+document.getElementById("facultyRole").innerText = faculty.role;
+document.getElementById("facultyQualification").innerText = faculty.qualification;
+document.getElementById("facultyExperience").innerText = faculty.experience;
+document.getElementById("facultyDept").innerText = faculty.dept;
+document.getElementById("facultyImage").src = faculty.image;
+document.getElementById("facultyBio").innerText = faculty.bio;
+
+// Achievements
+const list = document.getElementById("facultyAchievements");
+faculty.achievements.forEach(item => {
+    const li = document.createElement("li");
+    li.innerText = item;
+    list.appendChild(li);
+});
+</script>
+</body>
+</html>

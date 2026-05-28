@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICMS College - FAQ</title>
+	
+	<!-- css for dark mode -->
+	<link rel="stylesheet" href="css/darkmode.css">
+	
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .hero {
+            background: url('https://images.unsplash.com/photo-1562774053-701939374585') no-repeat center center/cover;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+		.overlay {
+         background: rgba(0,0,0,0.7);
+         width: 100%;
+         padding: 60px;
+         }
+        /* Nav menu */
+		.navbar {
+    padding: 12px 0;
+}
+
+.navbar-brand {
+    font-size: 22px;
+}
+
+.nav-link {
+    font-size: 15px;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important;
+}
+
+.dropdown-menu {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.dropdown-item:hover 
+{
+    background: #0d6efd;
+    color: white;
+}
+		/* footer */
+
+		footer a 
+		{
+			text-decoration: none;
+		}
+
+		footer a:hover 
+		{
+		text-decoration: underline;
+		}
+
+    </style>
+	
+	<!-- style sheet for fade-in on scroll -->
+	<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+
+    <a class="navbar-brand fw-bold" href="Home.php">ICMS College</a>
+
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+
+        <!-- Home -->
+        <li class="nav-item">
+          <a class="nav-link" href="Home.php">Home</a>
+        </li>
+
+        <!-- About -->
+        <li class="nav-item">
+          <a class="nav-link" href="Aboutus.html">About</a>
+        </li>
+
+        <!-- Academics Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Academics</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="Cources.html">Courses</a></li>
+            <li><a class="dropdown-item" href="Admission.html">Admissions</a></li>
+            <li><a class="dropdown-item" href="Fees.html">Fees</a></li>
+          </ul>
+        </li>
+
+        <!-- Campus Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Campus</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="facilities.html">Facilities</a></li>
+            <li><a class="dropdown-item" href="Gallery.html">Gallery</a></li>
+          </ul>
+        </li>
+
+        <!-- Students Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Students</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="placement.html">Placements</a></li>
+            <li><a class="dropdown-item" href="Recruiters.html">Recruiters</a></li>
+            <li><a class="dropdown-item" href="student_portfolio.html">Portfolio</a></li>
+          </ul>
+        </li>
+
+        <!-- More Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">More</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="Contact.html">Contact</a></li>
+            <li><a class="dropdown-item" href="feedback.html">Feedback</a></li>
+            <li><a class="dropdown-item" href="FAQ.html">FAQ</a></li>
+            <li><a class="dropdown-item" href="faculty.html">Faculty</a></li>
+          </ul>
+        </li>
+
+        <!-- Login -->
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Login</a>
+        </li>
+
+        <!-- Dark Mode -->
+        <li class="nav-item ms-lg-3">
+          <button onclick="toggleDarkMode()" class="btn btn-outline-light btn-sm">
+            🌙 Dark Mode
+          </button>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+     
+    
+<!-- Hero -->
+<section class="hero">
+    <div class="overlay text-center" data-aos="fade-down">
+        <h1>Welcome to ICMS College</h1>
+        <p>Empowering Students for a Bright Future</p>
+        <a href="Enquiryform.html" class="btn btn-warning m-2">Apply Now</a>
+        <a href="Cources.html" class="btn btn-light m-2">Explore Courses</a>
+    </div>
+</section>
+
+<!--FAQ Sectio-->
+<div class="container my-5">
+    <h2 class="text-center mb-4">FQAs</h2>
+	
+	<div class="accordion" id="faqAccordion">
+	
+	<!-- FAQ 1-->
+	  <div class="accordion-item" data-aos="fade-down">
+	     <h2 class="accordion-header">
+		    <buttton class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">
+			        What courses are offered at ICMS College?
+			</button>
+		</h2>
+		<div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+		   <div class="accordion-body">
+		      We offer BCA, B.Com, BBA, DCA, Tally, Advanced Excel, Programming and many more courses.
+			</div>
+		</div>
+	</div>
+	
+	<!-- FAQ 2-->
+	  <div class="accordion-item" data-aos="fade-down">
+	     <h2 class="accordion-header">
+		    <buttton class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">
+			     What is the admission process?
+			</button>
+		</h2>
+		<div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+		   <div class="accordion-body">
+		      Fill the admission form, submit documents, pay fees and confirm your admission.
+			</div>
+		</div>
+	</div>
+	
+	
+	<!-- FAQ 3-->
+	  <div class="accordion-item" data-aos="fade-down">
+	     <h2 class="accordion-header">
+		    <buttton class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq3">
+			        What is the eligibility criteria?
+			</button>
+		</h2>
+		<div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+		   <div class="accordion-body">
+		      Eligibility depends on course. Most require 10th or 12th pass.
+			</div>
+		</div>
+	</div>
+	
+	<!-- FAQ 4-->
+	  <div class="accordion-item" data-aos="fade-down">
+	     <h2 class="accordion-header">
+		    <buttton class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq4">
+			        Do you provide placement support?
+			</button>
+		</h2>
+		<div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+		   <div class="accordion-body">
+		      Yes, we provide placement assistance and career guidance to students.
+			</div>
+		</div>
+	</div>
+	
+	<!-- FAQ 5-->
+	  <div class="accordion-item" data-aos="fade-down">
+	     <h2 class="accordion-header">
+		    <buttton class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq5">
+			     How can I contact the college?
+			</button>
+		</h2>
+		<div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+		   <div class="accordion-body">
+		     You can contact us via phone, email or visit our contact page.
+			</div>
+		</div>
+	</div>
+	
+	
+	<!-- FAQ 6-->
+	  <div class="accordion-item" data-aos="fade-down">
+	     <h2 class="accordion-header">
+		    <buttton class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq6">
+			       What is the fee structure of courses?
+			</button>
+		</h2>
+		<div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+		   <div class="accordion-body">
+		     The fee structure varies depending on the course. Please contact the college or visit the admissions page for detailed information.
+			</div>
+		</div>
+	</div>
+	
+	
+	<!-- FAQ 7-->
+	  <div class="accordion-item" data-aos="fade-down">
+	     <h2 class="accordion-header">
+		    <buttton class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq7">
+			       Are online classes available?
+			</button>
+		</h2>
+		<div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+		   <div class="accordion-body">
+		     Yes, we offer both online and offline classes for selected courses..
+			</div>
+		</div>
+	</div>
+	 
+	 
+	 <!-- FAQ 8-->
+	  <div class="accordion-item" data-aos="fade-down">
+	     <h2 class="accordion-header">
+		    <buttton class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq8">
+			        Do you provide certificates after course completion?
+			</button>
+		</h2>
+		<div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+		   <div class="accordion-body">
+		      Yes, students receive a certificate after successfully completing their course.
+			</div>
+		</div>
+	</div>
+	
+	<!-- FAQ 9-->
+	  <div class="accordion-item" data-aos="fade-down">
+	     <h2 class="accordion-header">
+		    <buttton class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq9">
+			    What are the class timings?    
+			</button>
+		</h2>
+		<div id="faq9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+		   <div class="accordion-body">
+		      We offer flexible timings including morning, afternoon, and evening batches.
+			</div>
+		</div>
+	</div>
+	
+	<!-- FAQ 10-->
+	  <div class="accordion-item" data-aos="fade-down">
+	     <h2 class="accordion-header">
+		    <buttton class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq10">
+			    Is there any scholarship or discount available?    
+			</button>
+		</h2>
+		<div id="faq10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+		   <div class="accordion-body">
+		      Yes, we provide scholarships and discounts for meritorious and economically weaker students.
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+
+<!-- Footer -->
+<footer class="bg-dark text-white pt-4 pb-2">
+    <div class="container">
+        <div class="row text-center text-md-start">
+
+            <!-- College Info -->
+            <div class="col-md-4 mb-3">
+                <h5>ICMS College</h5>
+                <p>Providing quality education and shaping future leaders.</p>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-md-4 mb-3">
+                <h5>Contact Us</h5>
+                <p>📞 Phone: <a href="tel:+918126863163" class="text-white">+91-8126863163</a></p>
+                <p>📧 Email: <a href="mailto:info@icmscollege.com" class="text-white">info@icmscollege.com</a></p>
+                <p>📍 Address: Agwar, India</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-4 mb-3">
+                <h5>Quick Links</h5>
+                <p><a href="Home.html" class="text-white">Home</a></p>
+                <p><a href="Aboutus.html" class="text-white">About</a></p>
+                <p><a href="Contact.html" class="text-white">Contact</a></p>
+            </div>
+		
+        </div>
+
+        <hr class="bg-light">
+
+        <!-- Bottom -->
+        <div class="text-center">
+            <p class="mb-0">© 2026 ICMS College | All Rights Reserved</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Javascript for dynamic counter -->
+<script>
+const counters = document.querySelectorAll('.counter');
+
+const startCounting = (counter) => {
+    const target = +counter.getAttribute('data-target');
+    let count = 0;
+    const speed = target / 100;
+	
+    const duration = 2000;
+    const stepTime = 20;
+    const steps = duration / stepTime;
+    const increment = target / steps;
+
+    const updateCount = () => {
+        if (count < target) {
+            count += speed;
+            counter.innerText = Math.floor(count);
+            setTimeout(updateCount, 20);
+        } else {
+            counter.innerText = target + "+";
+        }
+    };
+
+    updateCount();
+};
+
+// Trigger on scroll
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            startCounting(entry.target);
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+counters.forEach(counter => {
+    observer.observe(counter);
+});
+</script>
+
+<!-- Javascript for fade-in on scroll -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+
+<!-- Dark mode js -->
+<script src="js/darkmode.js"></script>
+
+</body>
+</html>

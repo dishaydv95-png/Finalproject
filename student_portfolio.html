@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICMS College - Student Portfolio</title>
+	
+	<!-- css for dark mode -->
+	<link rel="stylesheet" href="css/darkmode.css">
+	
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	
+	<!-- style sheet for fade-in on scroll -->
+	<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<style>
+        .hero {
+            background: url('images/students/banner.jpeg') no-repeat center center/cover;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+		.overlay {
+         background: rgba(0,0,0,0.7);
+         width: 100%;
+         padding: 40px;
+         }
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+		/* Nav menu */
+		.navbar {
+    padding: 12px 0;
+}
+
+.navbar-brand {
+    font-size: 22px;
+}
+
+.nav-link {
+    font-size: 15px;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important;
+}
+
+.dropdown-menu {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.dropdown-item:hover 
+{
+    background: #0d6efd;
+    color: white;
+}
+		/* footer */
+
+		footer a 
+		{
+			text-decoration: none;
+		}
+
+		footer a:hover 
+		{
+		text-decoration: underline;
+		}
+		
+		.card {
+        transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+         transform: translateY(-10px);
+         box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+         }
+		 .company-logo img{
+		   height: 60px;
+		   object-fit: contain;
+		   }
+		 
+    </style>
+	
+	<!-- style sheet for fade-in on scroll -->
+	<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+	
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+
+    <a class="navbar-brand fw-bold" href="Home.php">ICMS College</a>
+
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+
+        <!-- Home -->
+        <li class="nav-item">
+          <a class="nav-link" href="Home.php">Home</a>
+        </li>
+
+        <!-- About -->
+        <li class="nav-item">
+          <a class="nav-link" href="Aboutus.html">About</a>
+        </li>
+
+        <!-- Academics Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Academics</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="Cources.html">Courses</a></li>
+            <li><a class="dropdown-item" href="Admission.html">Admissions</a></li>
+            <li><a class="dropdown-item" href="Fees.html">Fees</a></li>
+          </ul>
+        </li>
+
+        <!-- Campus Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Campus</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="facilities.html">Facilities</a></li>
+            <li><a class="dropdown-item" href="Gallery.html">Gallery</a></li>
+          </ul>
+        </li>
+
+        <!-- Students Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Students</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="placement.html">Placements</a></li>
+            <li><a class="dropdown-item" href="Recruiters.html">Recruiters</a></li>
+            <li><a class="dropdown-item" href="student_portfolio.html">Portfolio</a></li>
+          </ul>
+        </li>
+
+        <!-- More Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">More</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="Contact.html">Contact</a></li>
+            <li><a class="dropdown-item" href="feedback.html">Feedback</a></li>
+            <li><a class="dropdown-item" href="FAQ.html">FAQ</a></li>
+            <li><a class="dropdown-item" href="faculty.html">Faculty</a></li>
+          </ul>
+        </li>
+
+        <!-- Login -->
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Login</a>
+        </li>
+
+        <!-- Dark Mode -->
+        <li class="nav-item ms-lg-3">
+          <button onclick="toggleDarkMode()" class="btn btn-outline-light btn-sm">
+            🌙 Dark Mode
+          </button>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+     
+  
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="overlay text-center" data-aos="fade-down">
+        <h1>Student Portfolio</h1>
+        <p>Meet our toppers and achivers of year</p>
+    </div>
+</section>
+
+		
+
+<!-- student Section -->
+<div class="container my-5" data-aos="zoom-in" data-aos-delay="100">
+<h2 class="text-center mb-4">Student Portfolio</h2>
+    <div class="row g-4">
+
+        <!-- student 1 -->
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card facility-card shadow text-center">
+                <img src="images\students\1.jpeg">
+                <div class="card-body">
+                    <h5>Amit Sharma</h5>
+                    <p class="text-muted">BCA - 6th Semester</p>
+					<p><strong>Percentage:</strong>90%</p>
+					<p>Coding Expert</p>
+					<a href="student_portfolio_details.html?id=1" class="btn btn-primary">More Detials</a>
+                </div>
+            </div>
+        </div>
+		
+		 
+		<!-- Student 2 -->
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card facility-card shadow text-center">
+                <img src="images\students\2.jpeg">
+                <div class="card-body">
+                    <h5>Suman Verma</h5>
+                    <p class="text-muted">B.Com - 6th Semester</p>
+					<p><strong>Percentage:</strong>80%</p>
+					<p>Bussiness Straitegy Winner</p>
+					<a href="student_portfolio_details.html?id=2" class="btn btn-primary">More Detials</a>
+                </div>
+            </div>
+        </div>
+		
+		<!-- Student 3 -->
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card facility-card shadow text-center">
+                <img src="images\students\3.jpeg">
+                <div class="card-body">
+                    <h5>Abhay Kumar</h5>
+                    <p class="text-muted">MSc.IT - 4th Semester</p>
+					<p><strong>Percentage:</strong>89%</p>
+					<p>Coding and Web Development Expert</p>
+					<a href="student_portfolio_details.html?id=3" class="btn btn-primary">More Detials</a>
+                </div>
+            </div>
+        </div>
+		
+		<!-- Student 4 -->
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card facility-card shadow text-center">
+                <img src="images\students\4.jpeg">
+                <div class="card-body">
+                    <h5>Sahil Khan</h5>
+                    <p class="text-muted">MCA - 4th Semester</p>
+					<p><strong>Percentage:</strong>85%</p>
+					<p>Algorithm Designing Expert</p>
+					<a href="student_portfolio_details.html?id=4" class="btn btn-primary">More Detials</a>
+                </div>
+            </div>
+        </div>
+		
+		<!-- Student 5 -->
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card facility-card shadow text-center">
+                <img src="images\students\5.jpeg">
+                <div class="card-body">
+                    <h5>Rakhi Mehta</h5>
+                    <p class="text-muted">BBA - 6th Semester</p>
+					<p><strong>Percentage:</strong>87%</p>
+					<p>Bussiness Straitegy Winner</p>
+					<a href="student_portfolio_details.html?id=5" class="btn btn-primary">More Detials</a>
+                </div>
+            </div>
+        </div>
+		
+		<!-- Student 6 -->
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card facility-card shadow text-center">
+                <img src="images\students\6.jpeg">
+                <div class="card-body">
+                    <h5>Isha Khanna</h5>
+                    <p class="text-muted">MBA - 4th Semester</p>
+					<p><strong>Percentage:</strong>88%</p>
+					<p>Bussiness Excellence Awardee</p>
+					<a href="student_portfolio_details.html?id=6" class="btn btn-primary">More Detials</a>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+
+<!-- CTA -->
+<div class="bg-primary text-white text-center p-5" data-aos="fade-up">
+    <h2>Learn from the Best Faculty</h2>
+    <p>Join ICMS College today</p>
+    <a href="Admission.html" class="btn btn-light">Apply Now</a>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white pt-4 pb-2">
+    <div class="container">
+        <div class="row text-center text-md-start">
+
+            <!-- College Info -->
+            <div class="col-md-4 mb-3">
+                <h5>ICMS College</h5>
+                <p>Providing quality education and shaping future leaders.</p>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-md-4 mb-3">
+                <h5>Contact Us</h5>
+                <p>📞 Phone: <a href="tel:+918126863163" class="text-white">+91-8126863163</a></p>
+                <p>📧 Email: <a href="mailto:info@icmscollege.com" class="text-white">info@icmscollege.com</a></p>
+                <p>📍 Address: Agwar, India</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-4 mb-3">
+                <h5>Quick Links</h5>
+                <p><a href="Home.html" class="text-white">Home</a></p>
+                <p><a href="Aboutus.html" class="text-white">About</a></p>
+                <p><a href="Contact.html" class="text-white">Contact</a></p>
+            </div>
+		
+        </div>
+
+        <hr class="bg-light">
+
+        <!-- Bottom -->
+        <div class="text-center">
+            <p class="mb-0">© 2026 ICMS College | All Rights Reserved</p>
+        </div>
+    </div>
+</footer>
+		
+		
+		
+		
+		
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- Javascript for fade-in on scroll -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+
+<!-- Dark mode js -->
+<script src="js/darkmode.js"></script>
+</body>
+</html>
